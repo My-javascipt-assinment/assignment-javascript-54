@@ -214,73 +214,151 @@ new Map()
 //   ul.innerHTML = output;
   
 // }
-function createAccount(){let getName = document.getElementById('accountHolderName').value;
-  let getAccountNumber = document.getElementById('accountNo').value; 
-  let getBalance = Number(document.getElementById('initialBalance').value);
-  console.log(getName);
-  console.log(getAccountNumber);
-  console.log(getBalance);
-  const account = new Map();
-  account.set(getAccountNumber,{Name : getName, Balance : getBalance});
-  console.log(account)
-  let output = '';
-  account.forEach((item,val)=>{output += `Account Number : ${val}| Name : ${item.Name}| Balance : ${item.Balance}`})
-  let ul = document.getElementById('ul');
-  ul.innerHTML = output;
+// function createAccount(){let getName = document.getElementById('accountHolderName').value;
+//   let getAccountNumber = document.getElementById('accountNo').value; 
+//   let getBalance = Number(document.getElementById('initialBalance').value);
+//   console.log(getName);
+//   console.log(getAccountNumber);
+//   console.log(getBalance);
+//   const account = new Map();
+//   account.set(getAccountNumber,{Name : getName, Balance : getBalance});
+//   console.log(account)
+//   let output = '';
+//   account.forEach((item,val)=>{output += `Account Number : ${val}| Name : ${item.Name}| Balance : ${item.Balance}`})
+//   let ul = document.getElementById('ul');
+//   ul.innerHTML = output;
   
-}
-// deposit 
-function deposit(){let getName = document.getElementById('accountHolderName').value;
-  let getAccountNumber = document.getElementById('accountNo').value; 
-  let getBalance = Number(document.getElementById('initialBalance').value);
-  let add = Number(document.getElementById('addBalance').value);
-  let newBalance = getBalance + add;
-  const account = new Map();
-  account.set(getAccountNumber,{Name : getName, Balance : newBalance});
-  console.log(account)
-  let output = '';
-  account.forEach((item,val)=>{output += `Account Number : ${val}| Name : ${item.Name}| Balance : ${item.Balance}`})
-  let ul = document.getElementById('ul');
-  ul.innerHTML = output;
+// }
+// // deposit 
+// function deposit(){let getName = document.getElementById('accountHolderName').value;
+//   let getAccountNumber = document.getElementById('accountNo').value; 
+//   let getBalance = Number(document.getElementById('initialBalance').value);
+//   let add = Number(document.getElementById('addBalance').value);
+//   let newBalance = getBalance + add;
+//   const account = new Map();
+//   account.set(getAccountNumber,{Name : getName, Balance : newBalance});
+//   console.log(account)
+//   let output = '';
+//   account.forEach((item,val)=>{output += `Account Number : ${val}| Name : ${item.Name}| Balance : ${item.Balance}`})
+//   let ul = document.getElementById('ul');
+//   ul.innerHTML = output;
   
-}
-// withdraw 
-function withdraw(){let getName = document.getElementById('accountHolderName').value;
-  let getAccountNumber = document.getElementById('accountNo').value; 
-  let getBalance = Number(document.getElementById('initialBalance').value);
-  let add = Number(document.getElementById('addBalance').value);
-  let newBalance = getBalance + add;
-  let withdraw = Number(document.getElementById('withdraw').value);
-  let availalbleBalance = newBalance - withdraw;
-  const account = new Map();
-  account.set(getAccountNumber,{Name : getName, Balance : availalbleBalance});
-  console.log(account)
-  let output = '';
-  account.forEach((item,val)=>{output += `Account Number : ${val}| Name : ${item.Name}| Balance : ${item.Balance}`})
-  let ul = document.getElementById('ul');
-  ul.innerHTML = output;
+// }
+// // withdraw 
+// function withdraw(){let getName = document.getElementById('accountHolderName').value;
+//   let getAccountNumber = document.getElementById('accountNo').value; 
+//   let getBalance = Number(document.getElementById('initialBalance').value);
+//   let add = Number(document.getElementById('addBalance').value);
+//   let newBalance = getBalance + add;
+//   let withdraw = Number(document.getElementById('withdraw').value);
+//   let availalbleBalance = newBalance - withdraw;
+//   const account = new Map();
+//   account.set(getAccountNumber,{Name : getName, Balance : availalbleBalance});
+//   console.log(account)
+//   let output = '';
+//   account.forEach((item,val)=>{output += `Account Number : ${val}| Name : ${item.Name}| Balance : ${item.Balance}`})
+//   let ul = document.getElementById('ul');
+//   ul.innerHTML = output;
   
-}
+// }
 
 
 /*==================================== Question No 1 =========================================
 
 ======================================= Answer =====================================*/
+// Object.entries(student).forEach(([key, value]) => {
+    //   output += `<li><strong>${key}</strong> : ${value}</li>`;
+    // });
+//  const student = {name : 'Aziz',
+//   class : 'Matric',
+//   address  : 'District Mianwali, Tehsil Essa khel, p/o kalabagh, kot chandan punjab'
+//  }
+//  console.log(student);
+//  let addr = student.address;
+//  console.log(addr);
+// //  function for truncating
+//  function truncate(){let shortAddress = addr.slice(0,13) + '....';
+//   console.log(shortAddress)
+
+//  }
+//  truncate()
+// //  function ends
+// // function complete address
+// function complete(){let completeAddress = addr.slice(0);
+//   console.log(completeAddress)
+// }
+// complete()
+// // function complete address end
+//  let ul = document.getElementById('ul');
+//  let output = '';
+// Object.entries(student).forEach(([Key, value]) =>{output += `<li>${Key} : ${value}`})
+//  ul.innerHTML = output;
 
 
+//  const student = {
+//       name : 'Aziz',
+//       class : 'Matric',
+//       address : 'District Mianwali, Tehsil Essa khel, p/o kalabagh, kot chandan punjab'
+//     };
 
+//     let addr = student.address;
 
+//     let ul = document.getElementById('ul');
+//     let output = '';
 
+//     Object.entries(student).forEach(([key, value]) => {
+//       if (key === "address") {
+//         // Add buttons for address
+//         output += `<li>
+//           ${key} : <span id="addressText">${value}</span>
+//           <button onclick="truncate()">Truncate</button>
+//           <button onclick="complete()">Full</button>
+//         </li>`;
+//       } else {
+//         output += `<li>${key} : ${value}</li>`;
+//       }
+//     });
 
+//     ul.innerHTML = output;
+
+//     // function for truncating
+//     function truncate() {
+//       let shortAddress = addr.slice(0, 13) + '....';
+//       document.getElementById("addressText").innerText = shortAddress;
+//     }
+
+//     // function for full address
+//     function complete() {
+//       let completeAddress = addr;
+//       document.getElementById("addressText").innerText = completeAddress;
+//     }
 /*==================================== Question No 1 =========================================
 
 ======================================= Answer =====================================*/
+// https://dummyjson.com/users 
 
+// const myPromise = new Promise((resolve,reject)=>{
+//   let num = prompt('enter number')
+//   if(num % 2 === 0){resolve('promise succeede')}
+// else{reject('promise failed')}})
+// myPromise
+// .then((resolve)=>{console.log(resolve)})
+// .catch((reject)=>{console.log(reject)})
 
-
-
-
-
+function api(){const apiUrl = 'https://dummyjson.com/users';
+  fetch(apiUrl)
+  .then((sucees)=>{return sucees.json()})
+  .then((realData)=>{console.log(realData);
+    show(realData.users)
+  })
+  .catch((err)=>{console.log(err)})
+}
+api()
+function show(api){let ul = document.getElementById('ul');
+  ul.innerHTML = api.map((item)=>{return `
+    <li>${item.id}: ${item.firstName}: ${item.lastName}</li>`}).join('')
+}
+show()
 
 /*==================================== Question No 1 =========================================
 
