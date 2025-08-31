@@ -159,61 +159,9 @@ new Map()
 
 
 /*==================================== Question No 10 =========================================
-
+simple bank account
 ======================================= Answer =====================================*/
-// function basic(){ let name = document.getElementById("accountHolderName").value;
-//   let number = document.getElementById("accountNo").value;
-//   let balance = Number(document.getElementById('initialBalance').value);
-//   console.log(name);
-//   console.log(number);
-//   console.log(balance);
-//   const maper = new Map();
-// maper.set(number, { name: name, balance: balance })
-  
-//   console.log(maper);
-//   let ul = document.getElementById('ul');
-//   let output = '';
-//   maper.forEach((item,val)=>{output = output + `Number : ${number} Name : ${name} Balance : ${balance}` })
-//   ul.innerHTML = output;
- 
-// }
-// function deposit(basic){let deposit = Number(document.getElementById('addBalance').value);
-//    let balance = Number(document.getElementById('initialBalance').value);
 
-//   let newBalance = balance + deposit;
- 
-//   // show update
-//   const maper = new Map();
-// maper.set(number, { name: name, balance: balance })
-//   let ul = document.getElementById('ul');
-//   let output = '';
-//   maper.forEach((item,val)=>{output = output + `Number : ${number} Name : ${name} Balance : ${newBalance}` })
-//   ul.innerHTML = output;
-
- 
-//  }
-
-// //  withdraw
-
-// function withdraw(){let deposit = Number(document.getElementById('addBalance').value);
-//    let balance = Number(document.getElementById('initialBalance').value);
-
-//   let newBalance = balance + deposit;
-  
-  
-  
-//   let withdraw = Number(document.getElementById('withdraw').value);
-//   let remainingBalance = newBalance - withdraw;
-  
-//   // show update 
-//   const maper = new Map();
-// maper.set(number, { name: name, balance: balance })
-//   let ul = document.getElementById('ul');
-//   let output = '';
-//   maper.forEach((item,val)=>{output = output + `Number : ${number} Name : ${name} Balance : ${remainingBalance}` })
-//   ul.innerHTML = output;
-  
-// }
 // function createAccount(){let getName = document.getElementById('accountHolderName').value;
 //   let getAccountNumber = document.getElementById('accountNo').value; 
 //   let getBalance = Number(document.getElementById('initialBalance').value);
@@ -263,8 +211,8 @@ new Map()
 // }
 
 
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 11 =========================================
+render obj data on dom
 ======================================= Answer =====================================*/
 // Object.entries(student).forEach(([key, value]) => {
     //   output += `<li><strong>${key}</strong> : ${value}</li>`;
@@ -332,8 +280,8 @@ new Map()
 //       let completeAddress = addr;
 //       document.getElementById("addressText").innerText = completeAddress;
 //     }
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 12 =========================================
+promise and api
 ======================================= Answer =====================================*/
 // https://dummyjson.com/users 
 
@@ -345,22 +293,22 @@ new Map()
 // .then((resolve)=>{console.log(resolve)})
 // .catch((reject)=>{console.log(reject)})
 
-function api(){const apiUrl = 'https://dummyjson.com/users';
-  fetch(apiUrl)
-  .then((sucees)=>{return sucees.json()})
-  .then((realData)=>{console.log(realData);
-    show(realData.users)
-  })
-  .catch((err)=>{console.log(err)})
-}
-api()
-function show(api){let ul = document.getElementById('ul');
-  ul.innerHTML = api.map((item)=>{return `
-    <li>${item.id}: ${item.firstName}: ${item.lastName}</li>`}).join('')
-}
-show()
+// function api(){const apiUrl = 'https://dummyjson.com/users';
+//   fetch(apiUrl)
+//   .then((sucees)=>{return sucees.json()})
+//   .then((realData)=>{console.log(realData);
+//     show(realData.users)
+//   })
+//   .catch((err)=>{console.log(err)})
+// }
+// api()
+// function show(api){let ul = document.getElementById('ul');
+//   ul.innerHTML = api.map((item)=>{return `
+//     <li>${item.id}: ${item.firstName}: ${item.lastName}</li>`}).join('')
+// }
+// show()
 
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 13 =========================================
 
 ======================================= Answer =====================================*/
 
