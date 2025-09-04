@@ -895,57 +895,190 @@ Encapsulation in oop
 // console.log(currentBalance);
 
 
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 37 =========================================
+recursion function practice
 ======================================= Answer =====================================*/
-class Remote {
-  turnOn() {
-    this.#sendSignal("Power On");
-  }
 
-  changeChannel(channel) {
-    this.#sendSignal(`Changing to channel ${channel}`);
-  }
+// const user = [
+//   { name: 'Aziz', rollNo: 23, isFeePaid: true },
+//   { name: 'Sandleeb', rollNo: 200, isFeePaid: false },
+//   { name: 'Klsoom', rollNo: 21, isFeePaid: true },
+//   { name: 'Saleem', rollNo: 24, isFeePaid: false }
+// ];
 
-  // hidden process
-  #sendSignal(signal) {
-    console.log("Signal sent:", signal);
+// const inTime = new Date('04 September 2025 09:00:00');
+// const current = new Date();
+// console.log("Current Time:", current);
+// console.log("In Time:", inTime);
+
+// const functionalityTester = () => {
+//   const rollNumberInput = prompt('Enter roll number');
+//   const rollNumberChecking = user.find((item) => item.rollNo == rollNumberInput);
+
+//   if (!rollNumberInput) {
+//     functionalityTester(); // re-run if input is empty
+//   } 
+//   else if (!rollNumberChecking) {
+//     console.log("Invalid Roll Number");
+//     functionalityTester(); // re-run if roll number not found
+//   } 
+//   else if (!rollNumberChecking.isFeePaid) {
+//     console.log('❌ Fee is not paid');
+//   } 
+//   else if (new Date().getTime() > inTime.getTime()) {
+//     console.log('⚠️ You are late');
+//   } 
+//   else {
+//     console.log('✅ Attendance marked for Roll Number:', rollNumberInput);
+//   }
+// };
+
+// functionalityTester();
+
+/*==================================== Question No 38 =========================================
+Library Book Borrow System
+
+You have an array of students with their names, roll numbers, and a property hasLibraryCard.
+
+Ask the user for their roll number using prompt().
+
+Conditions:
+
+If roll number not found → ask again.
+
+If student does not have a library card → show "❌ You cannot borrow books".
+
+If the current time is after 5:00 PM today, show "⚠️ Library is closed".
+
+Otherwise → "✅ You can borrow a book, Roll Number: ___".
+======================================= Answer =====================================*/
+// const libraryRecord = [
+//   {name : 'Saqib',
+//     rollNumber : 2,
+//     hasLibraryCard: false
+//   },
+//   {name : 'Habib',
+//     rollNumber : 33,
+//     hasLibraryCard: true
+//   }
+// ]
+// const time = new Date('04 september 06:00:00');
+// const current = new Date();
+// console.log(time);
+// console.log(current);
+// function recursion(){
+//   const enterRollNumber = prompt('Enter roll number');
+//   const check = libraryRecord.find((item)=>{ return item.rollNumber == enterRollNumber;})
+//   if(!enterRollNumber){recursion()}
+//   else if(!check){console.log('invalid roll number')
+//     recursion()
+//   }
+//   else if (!check.hasLibraryCard){console.log('without library card not entry')}
+//   else if (new Date().getTime() > time.getTime()){console.log('library is closed')}
+//   else{console.log('Welcom ', enterRollNumber)}
+// }
+// recursion()
+
+
+
+
+/*==================================== Question No 39 =========================================
+Exam Entry System
+
+You have an array of students with name, rollNo, and isAdmitCardIssued.
+
+Exam reporting time is 8:30 AM today.
+
+Ask the user to enter roll number using prompt().
+
+Conditions:
+
+If roll number is invalid → ask again.
+
+If isAdmitCardIssued is false → show "❌ Admit card not issued".
+
+If current time is after 8:30 AM, show "⚠️ You are late, entry not allowed".
+
+Otherwise → "✅ Entry granted, good luck Roll Number: ___".
+======================================= Answer =====================================*/
+// const student = [
+//   {rollNumber : 222,
+//     name : 'Umer',
+//     isAdmitCardIssued : false
+//   },
+//   {rollNumber : 322,
+//     name : 'Pervaiz',
+//     isAdmitCardIssued : true
+//   }
+// ]
+// const time = new Date('09/04/2025 07:00:00');
+// console.log(time);
+// function recursion(){
+//   const roll = prompt('Enter your roll number');
+//   const check = student.find((item)=>{return item.rollNumber == roll})
+//   if(!roll){recursion()}
+//   else if (!check){console.log('invalid roll number');
+//     recursion()
+//   }
+//   else if (!check.isAdmitCardIssued){console.log('without card no entery')}
+//   else if(time.getTime() < new Date().getTime()){console.log('you are late')}
+//   else{console.log('welcome :',roll)}
+// }
+
+// recursion()
+
+/*==================================== Question No 40 =========================================
+Hostel Mess Entry
+
+You have an array of students with name, rollNo, and hasMessCard.
+
+Ask the user for rollNo.
+
+Conditions:
+
+If input is empty → ask again.
+
+If no student found → "❌ Invalid roll number".
+
+If hasMessCard === false → "❌ Mess card not found, no food".
+
+Mess timings are 1:00 PM to 3:00 PM.
+
+If current time is outside this range → "⚠️ Mess is closed".
+
+Otherwise → "✅ Food served, Roll No: ___".
+======================================= Answer =====================================*/
+const students = [
+  {name : 'Umer',
+    rollNumber : 2,
+    hasMessCard : false
+  },
+  {name : 'imran',
+    rollNumber : 22,
+    hasMessCard : true
   }
+]
+let time1 = new Date('05:00:00 09/04/2025');
+time1 = time1.toLocaleTimeString();
+console.log(time1)
+let time2 = new Date('08:00:00 09/04/2025');
+time2 = time2.toLocaleTimeString();
+console.log(time2);
+const current = new Date().toLocaleTimeString();
+console.log(current)
+function recursion(){
+  const rollNum = prompt('Enter roll number');
+  const check = students.find((item)=>{return item.rollNumber == rollNum})
+  if(!rollNum){recursion()}
+  else if(!check){console.log('invalid roll number')
+    recursion()
+  }
+  else if (!check.hasMessCard){console.log('without mess card no entery')}
+  else if(current < time1 || current > time2){console.log('mess is closed')}
+  else{console.log('welcome : ',rollNum)}
 }
 
-let remote = new Remote();
-remote.turnOn();           // Signal sent: Power On
-remote.changeChannel(5);   // Signal sent: Changing to channel 5
-
-// ❌ remote.#sendSignal("hack"); // Error: private method
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
+recursion()
 
 /*==================================== Question No 1 =========================================
 
