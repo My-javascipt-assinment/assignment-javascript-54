@@ -1048,296 +1048,204 @@ If current time is outside this range → "⚠️ Mess is closed".
 
 Otherwise → "✅ Food served, Roll No: ___".
 ======================================= Answer =====================================*/
-const students = [
-  {name : 'Umer',
-    rollNumber : 2,
-    hasMessCard : false
-  },
-  {name : 'imran',
-    rollNumber : 22,
-    hasMessCard : true
-  }
-]
-let time1 = new Date('05:00:00 09/04/2025');
-time1 = time1.toLocaleTimeString();
-console.log(time1)
-let time2 = new Date('08:00:00 09/04/2025');
-time2 = time2.toLocaleTimeString();
-console.log(time2);
-const current = new Date().toLocaleTimeString();
-console.log(current)
-function recursion(){
-  const rollNum = prompt('Enter roll number');
-  const check = students.find((item)=>{return item.rollNumber == rollNum})
-  if(!rollNum){recursion()}
-  else if(!check){console.log('invalid roll number')
-    recursion()
-  }
-  else if (!check.hasMessCard){console.log('without mess card no entery')}
-  else if(current < time1 || current > time2){console.log('mess is closed')}
-  else{console.log('welcome : ',rollNum)}
-}
+// const students = [
+//   {name : 'Umer',
+//     rollNumber : 2,
+//     hasMessCard : false
+//   },
+//   {name : 'imran',
+//     rollNumber : 22,
+//     hasMessCard : true
+//   }
+// ]
+// let time1 = new Date('05:00:00 09/04/2025');
+// time1 = time1.toLocaleTimeString();
+// console.log(time1)
+// let time2 = new Date('08:00:00 09/04/2025');
+// time2 = time2.toLocaleTimeString();
+// console.log(time2);
+// const current = new Date().toLocaleTimeString();
+// console.log(current)
+// function recursion(){
+//   const rollNum = prompt('Enter roll number');
+//   const check = students.find((item)=>{return item.rollNumber == rollNum})
+//   if(!rollNum){recursion()}
+//   else if(!check){console.log('invalid roll number')
+//     recursion()
+//   }
+//   else if (!check.hasMessCard){console.log('without mess card no entery')}
+//   else if(current < time1 || current > time2){console.log('mess is closed')}
+//   else{console.log('welcome : ',rollNum)}
+// }
 
-recursion()
+// recursion()
 
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 41 =========================================
+new Map()
+======================================= Answer =====================================*/
+// const map = new Map();
+// console.log(map);
+// map.set('Name','Aziz');
+// map.set('Let','ok');
+// map.set('age',22);
+// map.set('class','matric');
+// console.log(map);
+// console.log(map.get('age'));
+// console.log(map.size);
+// console.log(map.keys())
+// console.log(map.values());
+// console.log(map.entries());
+// console.log(map.has('Let'));
+// map.set('true','okok');
+// map.set(23,'number');
+
+// console.log(map)
+
+/*==================================== Question No 42 =========================================
+setTimeout()
+======================================= Answer =====================================*/
+// function abc(){
+//   console.log('i am going to bazar');
+//   console.log('i will buy vegetables');
+//   setTimeout(()=>{console.log('give me chicketn')},2000);
+//   console.log('i will buy bakery prouducts')
+// }
+// abc()
+/*==================================== Question No 43 =========================================
 
 ======================================= Answer =====================================*/
 
+// const showMessage = document.getElementById('show-err');
+// const submitBtn  = () =>{showMessage.innerHTML = 'Error in email input';
+//     showMessage.style.color = 'red';
+//     showMessage.style.display = 'block';
+//     setTimeout(() => {
+//         showMessage.innerHTML = '';
+    
+//     showMessage.style.display = 'none';
+//     }, 3000);
+// }
 
 
 
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 44 =========================================
+Sort numbers in ascending and descending order
+const numbers = [34, 7, 23, 32, 5, 62];
+// 👉 Sort them in ascending and then descending order
 
 ======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
+// const numbers = [34, 7, 23, 32, 5, 62];
+// console.log(numbers)
+// const order = numbers.sort((a,b)=>{ return a - b});
+// console.log(order);
+// const descending = numbers.sort((a,b)=>{return b - a});
+// console.log(descending)
+/*==================================== Question No 45 =========================================
+Object.keys(student).length;
 ======================================= Answer =====================================*/
+// const student = {name  : "Aziz",
+//   age: 22
+// }
+// console.log(Object.keys(student).length)
 
 
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 46 =========================================
+whitespace remover
 ======================================= Answer =====================================*/
+// let str = 'i love js';
+// let ans = str.replace(/\s+/g,'');
+// console.log(ans);
+// let sentence = 'he is watching criceket match';
+// let sen = sentence.replace(/\s+/g,'');
+// console.log(sen)
+// let tr = ' i love js ';
+// console.log(tr)
+// let trim = tr.trim();
+// console.log(trim)
 
 
 
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Queston No 47 =========================================
+Object.formentries()
 ======================================= Answer =====================================*/
+// let obj = {name: 'aziz',
+//   age : 30
+// }
+// let ans1 = Object.entries(obj);
+// console.log(ans1)
+// let ans = Object.fromEntries(ans1);
+// console.log(ans)
 
 
 
 
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 48 =========================================
+flat()
 ======================================= Answer =====================================*/
+// let array = ['mango','apple',['banana','grapes'],['guava','pineapple'],'watermelon'];
+// console.log(array);
+// let flt = array.flat();
+// console.log(flt);
+// console.log(Array.isArray(array));
+// let str = 'hello'
+// console.log(Array.isArray(str))
 
 
 
 
 
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 49 =========================================
+promise
 ======================================= Answer =====================================*/
+// const promisee = new Promise((resolve,reject)=>{
+//   let num = prompt('Enter number');
+//   if(num% 2 == 0){resolve('promise resolved')}
+//   else{reject('promise rejected')}
+// });
+// promisee
+// .then((resolve)=>{console.log(resolve)})
+// .catch((reject)=>{console.log(reject)})
+
+
+// async function handlePromise() {
+//   const promisee = new Promise((resolve, reject) => {
+//     let num = prompt('Enter number');
+//     if (num % 2 === 0) {
+//       resolve('promise resolved');
+//     } else {
+//       reject('promise rejected');
+//     }
+//   });
+
+//   try {
+//     const result = await promisee;
+//     console.log(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// handlePromise();
 
 
 
 
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 50 =========================================
+promise
 ======================================= Answer =====================================*/
+const promise = new Promise((pass,fail)=>{
+  let num1 = Number(prompt('Enter number 1'));
+  let num2 = Number(prompt('Enter number 2'));
+ 
+  let ans = 10;
+  if(num1 + num2 == ans){pass('promised passed')}
+  else(fail('promise failed'))
+})
+promise
+.then((pass)=>{console.log(pass)})
+.catch((fail)=>{console.log(fail)})
 
 
 
 
 
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-https://themewagon.com/themes/free-bootstrap-4-html5-web-developer-portfolio-website-template-satner/
-======================================= Answer =====================================*/
